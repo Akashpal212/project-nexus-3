@@ -744,6 +744,10 @@ footer .box {
   text-align: center;
 }
 
+footer .box a:hover {
+  text-decoration: underline;
+}
+
 footer .instagram-api img {
   width: 100%;
   height: 100%;

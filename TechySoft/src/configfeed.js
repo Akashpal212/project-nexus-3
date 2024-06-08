@@ -1,23 +1,23 @@
 const mongoose = require("mongoose");
-const connect = mongoose.connect("mongodb://localhost:27017/loginreg");
+const fconnect = mongoose.connect("mongodb://localhost:27017/loginreg");
 
-connect.then(() => {
+fconnect.then(() => {
     console.log("Database connected successfully");
 })
 .catch(() => {
     console.log("Database can't be connected");
 });
 
-const LoginSchema = new mongoose.Schema({
-    name: {
+const FeedSchema = new mongoose.Schema({
+    fname: {
         type: String,
         required: true
     },
-    password: {
+    feedback: {
         type: String,
         required: true
     }
 });
 
-const collection = new mongoose.model("users", LoginSchema);
-module.exports = collection;
+const fcollection = new mongoose.model("feedbackusers", FeedSchema);
+module.exports = fcollection;
