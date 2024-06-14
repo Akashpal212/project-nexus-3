@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const fconnect = mongoose.connect("mongodb://localhost:27017/loginreg");
+
+const fconnect = mongoose.connect("mongodb+srv://akashpal2122003:w07dIskMvuHC07kK@project-nexus3.gpbci4v.mongodb.net/?retryWrites=true&w=majority&appName=project-nexus3");
 
 fconnect.then(() => {
     console.log("Database connected successfully");
